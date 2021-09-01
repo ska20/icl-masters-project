@@ -1,0 +1,3 @@
+Li, H., Xiong, L., Zhang, L. and Jiang, X., 2014, August. DPSynthesizer: differentially private data synthesizer for privacy preserving data sharing. In Proceedings of the VLDB Endowment International Conference on Very Large Data Bases (Vol. 7, No. 13, p. 1677). NIH Public Access.
+
+Code from: https://github.com/DataResponsibly/DataSynthesizer

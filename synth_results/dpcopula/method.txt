@@ -1,0 +1,3 @@
+Li, H., Xiong, L. and Jiang, X., 2014. Differentially private synthesization of multi-dimensional data using copula functions. In Advances in database technology: proceedings. International conference on extending database technology (Vol. 2014, p. 475). NIH Public Access.
+
+Code from: https://github.com/thierryr/dpcopula_kendall.
