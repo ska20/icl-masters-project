@@ -69,7 +69,7 @@ plt.ylabel('Score')  # Add a y-label to the axes.
 plt.title(f'Average AUC Score by Epsilon - {title_name}')  # Add a title to the axes.
 hull = np.zeros(9)
 for name in fnames:
-    fpath = f'{data_dir}/{name}.{suffix}' # Generate filename
+    fpath = f'../posthoc_results/{data_dir}/{name}.{suffix}' # Generate filename
     data = pd.read_csv(fpath) # Read data
     data = data.to_numpy()
     avg = np.mean(data, axis=0) # Compute average across all 10 measurements
@@ -80,7 +80,7 @@ plotted = [] # list of graphs that have been plotted in color
 j=0
 
 for name in fnames:
-    fpath = f'{data_dir}/{name}.{suffix}' # Generate filename
+    fpath = f'../posthoc_results/{data_dir}/{name}.{suffix}' # Generate filename
     data = pd.read_csv(fpath) # Read data
     data = data.to_numpy()
     avg = np.mean(data, axis=0) # Compute average
