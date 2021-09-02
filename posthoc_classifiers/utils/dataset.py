@@ -16,7 +16,7 @@ class lifesci(Dataset):
     INPUT: fpath_fake - path to synthetic data file
     INPUT: transform - list of data transforms
     '''
-    def __init__(self, fpath_real, fpath_fake, transform=None):
+    def __init__(self, fpath_real, fpath_fake, transform=None, shuffle_cols):
 
         self.transform = transform # No transform is assigned
 
@@ -49,6 +49,9 @@ class lifesci(Dataset):
 
         real_data[11] = real_vector #attach class label
         fake_data[11] = fake_vector #attach class label
+
+        if shuffle_cols:
+            fake_data.apply(lambda x: x.sample(frac=1).values)
 
         frames = [real_data, fake_data]
 

@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 eps_list = [0.01, 0.0316, 0.1, 0.316, 1, 3.16, 10, 31.6, 100]
 train_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-shuffle_cols=True
+shuffle_cols=False
 
 results_type='dpcopula'
 fnames = [
