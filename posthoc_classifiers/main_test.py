@@ -23,7 +23,7 @@ for name in fnames:
         dataset_auc_max = []
         for epsilon in eps_list:
             real_data_path = f'../datasets/lifesci.csv'
-            fake_data_path = f'../Results/{results_type}/datasets_eps_{epsilon}/data_{epsilon}_{item}.csv'
+            fake_data_path = f'../synth_results/{results_type}/datasets_eps_{epsilon}/data_{epsilon}_{item}.csv'
 
 
             real_data = pd.read_csv(real_data_path, header=None)

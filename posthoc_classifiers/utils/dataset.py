@@ -16,7 +16,7 @@ class lifesci(Dataset):
     INPUT: fpath_fake - path to synthetic data file
     INPUT: transform - list of data transforms
     '''
-    def __init__(self, fpath_real, fpath_fake, transform=None, shuffle_cols):
+    def __init__(self, fpath_real, fpath_fake, transform, shuffle_cols):
 
         self.transform = transform # No transform is assigned
 

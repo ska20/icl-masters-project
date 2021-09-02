@@ -42,7 +42,7 @@ for item in train_list:
     auc_max = []
     for epsilon in eps_list:
         auc_scores = []
-        fake_data_path = f'../Results/{type}/datasets_eps_{epsilon}/synthetic_data_{epsilon}_{item}.csv' #Construct filepath to fake data
+        fake_data_path = f'../synth_results/{results_type}/datasets_eps_{epsilon}/data_{epsilon}_{item}.csv' #Construct filepath to fake data
         dataset = lifesci(real_data_path, fake_data_path, None, shuffle_cols) #Instantiate lifesci dataset object
         train, test = data_utils.random_split(dataset, [35822, 17644]) #Split into train and test sets
         train_loader = DataLoader(dataset=train, shuffle=True, batch_size=512, num_workers=8, pin_memory=True) #Initialize dataloaders
