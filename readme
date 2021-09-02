@@ -1,0 +1,44 @@
+This zipped archive contains the relevant software artefacts associated with the
+Masters' project titled "A Statistical Measure of the Quality of Synthetic Data"
+by Shreyas Kumar Annamraju.
+
+All code herein is implemented in Python3.
+
+To run the DP-WGAN implementation, simply enter:
+
+$ cd ./generative_models/dp_wgan
+
+Where . represents the top-level directory of this archive. From there, run the
+command:
+
+$ python3 run.py
+
+to execute the code. If you wish to change parameters, this must be done from
+within run.py, or code associated with the generative mechanism. 
+
+To run the post-hoc classifier experiments, enter:
+
+$ cd ./posthoc_classifiers
+
+where . represents the top-level directory of this archive. From there, run the
+command:
+
+$ python3 main_test.py
+
+to execute the code. If you wish to run the neural network test instead, run:
+
+$ python3 nn_test.py
+
+to execute the code. If you wish to alter parameters of the test, this must
+likewise be done by editing either main_test.py, nn_test.py, or their associated
+dependencies.
+
+If you wish to plot the experiment data, run:
+
+$ python3 plotting.py
+
+If you wis to plot the data associated with the shuffling experiment, please run
+
+$ python3 plotting_shuffles.py
+
+instead.
