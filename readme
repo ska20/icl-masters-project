@@ -1,6 +1,5 @@
-This zipped archive contains the relevant software artefacts associated with the
+This code archive contains the relevant software artefacts associated with the
 Masters' project titled "A Statistical Measure of the Quality of Synthetic Data"
-by Shreyas Kumar Annamraju.
 
 All code herein is implemented in Python3.
 
@@ -14,7 +13,7 @@ command:
 $ python3 run.py
 
 to execute the code. If you wish to change parameters, this must be done from
-within run.py, or code associated with the generative mechanism. 
+within run.py, or code associated with the generative mechanism.
 
 To run the post-hoc classifier experiments, enter:
 
