@@ -66,9 +66,9 @@ plt.title(f'Average AUC Score by Epsilon - {title_name}')  # Add a title to the 
 hull = np.zeros(9)
 shuffle_hull = np.zeros(9)
 for name in fnames:
-    fpath = f'{data_dir}/{name}.{suffix}' # generate filepath for data
+    fpath = f'../posthoc_results/{data_dir}/{name}.{suffix}' # generate filepath for data
     data_arr = data_dir.split('_')
-    fpath_shuffle = f'{data_arr[0]}_shuffle_aucs/{name}.{suffix}' # generate filepath for shuffled data
+    fpath_shuffle = f'../posthoc_results/{data_arr[0]}_shuffle_aucs/{name}.{suffix}' # generate filepath for shuffled data
 
     data = pd.read_csv(fpath) # read data
     shuffle_data = pd.read_csv(fpath_shuffle) # read shuffled data
@@ -96,5 +96,5 @@ plt.plot(eps_list, hull, linewidth=3, label='Shuffle Maximum', color='#1f77b4', 
 plt.ylim(0.5, 1.01)
 plt.grid()
 plt.legend()
-plt.savefig(f'{data_dir}.png')
+plt.savefig(f'{data_dir}_shuffle.png')
 plt.show()
