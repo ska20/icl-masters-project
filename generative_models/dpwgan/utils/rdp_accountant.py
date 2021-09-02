@@ -1,3 +1,8 @@
+# CODE TAKEN FROM: https://github.com/BorealisAI/private-data-generation.git
+# The moments accountant, upon which rdp_accountant.py is based
+# was introduced by Abadi et. al. in: https://arxiv.org/abs/1607.00133
+#
+#
 # Copyright 2018 The TensorFlow Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

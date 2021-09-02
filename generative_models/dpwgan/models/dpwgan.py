@@ -15,11 +15,11 @@ class DPWGAN(object):
     Initialize parameters for DPWGAN network
     '''
     def __init__(self, input_size, latent_size, target_epsilon, target_delta, device):
-        self.latent_size = latent_size #initialize GAN latent dimension
-        self.input_size = input_size #initialize GAN input dimension
-        self.target_epsilon = target_epsilon #initialize max budget
-        self.target_delta = target_delta #initialize privacy leakage parameter
-        self.device = device #assign device for computation
+        self.latent_size = latent_size # initialize GAN latent dimension
+        self.input_size = input_size # initialize GAN input dimension
+        self.target_epsilon = target_epsilon # initialize max budget
+        self.target_delta = target_delta # initialize privacy leakage parameter
+        self.device = device # assign device for computation
 
         self.generator = Generator(latent_size, input_size).to(device) # initialize generator network
         self.discriminator = Discriminator(input_size).to(device) # initialize discriminator network
@@ -45,10 +45,10 @@ class DPWGAN(object):
         nc = hyperparams.nc
         sigma = hyperparams.scale # Manually set noise scale
         data_loader = data_utils.DataLoader(data_utils.TensorDataset(torch.cuda.FloatTensor(train.to_numpy())),
-                                            batch_size=batch_size, shuffle=True) #Dataloader for training dataset
+                                            batch_size=batch_size, shuffle=True) # Dataloader for training dataset
 
-        optimizer_G = torch.optim.RMSprop(self.generator.parameters(), lr=5e-5) #Generator optimizer
-        optimizer_D = torch.optim.RMSprop(self.discriminator.parameters(), lr=5e-5) #Discriminator optimizer
+        optimizer_G = torch.optim.RMSprop(self.generator.parameters(), lr=5e-5) # Generator optimizer
+        optimizer_D = torch.optim.RMSprop(self.discriminator.parameters(), lr=5e-5) # Discriminator optimizer
 
         for parameter in self.discriminator.parameters():
             parameter.register_hook(

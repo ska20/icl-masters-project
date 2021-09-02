@@ -1,5 +1,9 @@
 import torch.nn as nn
-
+'''
+Class defining the Generator network for a GAN
+__init__(): initialises the network and defines the forward pass
+forward() : runs the forward pass for a given datum x
+'''
 class Generator(nn.Module):
     def __init__(self, latent_size, output_size):
         super(Generator, self).__init__()
@@ -20,7 +24,11 @@ class Generator(nn.Module):
     def forward(self, x):
         return self.main(x)
 
-
+'''
+Class defining the Discriminator network for a GAN
+__init__(): initialises the network and defines the forward pass
+forward() : runs the forward pass for a given datum x
+'''
 class Discriminator(nn.Module):
     def __init__(self, input_size):
         super(Discriminator, self).__init__()
